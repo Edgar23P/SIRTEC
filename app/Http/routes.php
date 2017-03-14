@@ -13,6 +13,9 @@
 Route::get('prueba',function(){
 	return "hola desde php";
 });
+Route::get('mi nombre/{nombre}',function($nombre){
+	return "mi nombre es " .$nombre;
+});
 
 Route::get('/', 'WelcomeController@index');
 
