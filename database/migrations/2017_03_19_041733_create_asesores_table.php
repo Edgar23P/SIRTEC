@@ -15,6 +15,12 @@ class CreateAsesoresTable extends Migration {
 		Schema::create('asesores', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('Nombre');
+			$table->string('Email');
+			$table->string('Area');
+			$table->string('Contraseña');
+			$table->string('No_Control_Asesor');
+			$table->primary('No_Control_Asesor');
 			$table->timestamps();
 		});
 	}

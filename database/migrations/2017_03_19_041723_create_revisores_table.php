@@ -15,6 +15,12 @@ class CreateRevisoresTable extends Migration {
 		Schema::create('revisores', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('Nombre');
+			$table->string('Email');
+			$table->string('Area');
+			$table->string('Contraseña');
+			$table->string('No_Control_Revisor');
+			$table->primary('No_Control_Revisor');
 			$table->timestamps();
 		});
 	}

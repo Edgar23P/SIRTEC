@@ -6,5 +6,6 @@ class Anteproyectos extends Model {
 
 	//
 		protected $table = "Anteproyectos"
+		
 
 }

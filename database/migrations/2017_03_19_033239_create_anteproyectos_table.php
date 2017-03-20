@@ -14,7 +14,17 @@ class CreateAnteproyectosTable extends Migration {
 	{
 		Schema::create('anteproyectos', function(Blueprint $table)
 		{
-			$table->increments('id');
+			
+			$table->string('Id_anteproyecto');
+			$table->string('Nombre');
+			$table->string('Descripcion');
+			$table->string('fecha');
+			$table->string('Empresa Responsable');
+			$table->primary('Id_anteproyecto');
+			$table->string('Revisor')->unsigned();
+			$table->foreign('Revisor')->references('No_Control_Revisor')->on('revisores');
+			$table->string('Asesor')->unsigned();
+			$table->foreign('Asesor')->references('No_Control_Asesor')->on('asesores');
 			$table->timestamps();
 		});
 	}
